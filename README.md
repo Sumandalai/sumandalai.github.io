@@ -1,1 +1,0 @@
-# sumandalai.github.io
