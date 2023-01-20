@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>technical task</title>
+    <style>
+        .clk {
+            /* background-color: aqua; */
+            text-align: end;
+            font-style: italic;
+        }
+        #idh {
+            text-align: center;
+            text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em rgb(0, 255, 34);
+        }
+        p {
+            font-size: 19px;
+            line-height: 1.4;
+            letter-spacing: 0.005em;
+            font-weight: 700;
+            font-style: italic;
+            text-shadow: 1px 1px 2px rgb(199, 255, 192);
+        }
+    </style>
+    <script>
+        let a;
+        let date;
+        let time;
+        setInterval(() => {
+            a = new Date();
+            date = a.toLocaleDateString();
+            time = a.getHours() + ':' + a.getMinutes() + ':' + a.getSeconds();
+            document.getElementById('time').innerHTML = time + "<br> " + date;
+        }, 1000);
+    </script>
+</head>
+
+<body>
+    <div class="clk">
+        <h1 class="cls1">Current time Is: <span id="time"></span></h1>
+    </div>
+
+    <h1 id="idh">HOME PAGE</h1>
+    <p>The oldest classical British and Latin writing had little or no space between words and could be written in
+        boustrophedon (alternating directions). Over time, text direction (left to right) became standardized. Word
+        dividers and terminal punctuation became common. The first way to divide sentences into groups was the original
+        paragraphos, similar to an underscore at the beginning of the new group.[1] The Greek parágraphos evolved into
+        the pilcrow (¶), which in English manuscripts in the Middle Ages can be seen inserted inline between sentences.
+    </p>
+    <nav>
+        <ul style="font-size: 30px;height: 250px;">
+            <li>Hello! welcome<button id="id1" onclick="alert('welcome!')">prompt</button></li>
+            <li>background light mode<button id="id2" onclick="background()">change BG</button></li>
+            <li>change the heading<button id="id3" onclick="changeH()">change heading</button></li>
+        </ul>
+    </nav>
+    <footer style="text-align: center;">
+        made by suman(122CS0068) &copy; all right reserved
+    </footer>
+    <script>
+
+        function background() {
+            document.body.style.backgroundColor = "aqua";
+        }
+        function changeH() {
+            setTimeout(() => {
+                document.getElementById('idh').innerText = "THIRD TASK COMPLETED";
+            }, 5000);
+        }
+
+    </script>
+</body>
+
+</html>
